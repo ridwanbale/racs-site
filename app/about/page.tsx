@@ -7,15 +7,15 @@ import { SectionHeader } from "@/components/site/SectionHeader";
 import { aboutPage, siteRoutes } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: siteRoutes[2].title,
-  description: siteRoutes[2].description,
+  title: siteRoutes[3].title,
+  description: siteRoutes[3].description,
   openGraph: {
-    title: siteRoutes[2].title,
-    description: siteRoutes[2].description,
+    title: siteRoutes[3].title,
+    description: siteRoutes[3].description,
   },
   twitter: {
-    title: siteRoutes[2].title,
-    description: siteRoutes[2].description,
+    title: siteRoutes[3].title,
+    description: siteRoutes[3].description,
   },
 };
 

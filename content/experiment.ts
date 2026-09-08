@@ -396,6 +396,42 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
   --output-dir docs\\experiments\\figures\\racs_v1_reproduction`,
 };
 
+export const releaseIdentity = {
+  heading: "Reference RACS V1",
+  note:
+    "Use the version and release identifiers below when referring to a specific evaluation of RACS V1.",
+  fields: [
+    ["Name", "RACS V1.0 \u2014 Seeded Robustness Evaluation"],
+    ["Release", "v1.0.0"],
+    ["Release date", "September 2026"],
+    ["Release tip", "0fc41a0"],
+    [
+      "Frozen implementation snapshot",
+      "b4764da6193e013c3c2e1f86763597498bc6253f",
+    ],
+    ["License", "Apache 2.0"],
+    ["Maintainer", "Ridwan Bale"],
+  ],
+  links: [
+    {
+      label: "Source",
+      href: site.githubUrl,
+    },
+    {
+      label: "Release",
+      href: site.v1ReleaseUrl,
+    },
+    {
+      label: "Experiment report",
+      href: "https://github.com/ridwanbale/racs-protocols/blob/main/docs/experiments/racs_v1_seeded_robustness.md",
+    },
+    {
+      label: "Reproduction",
+      href: "/research/v1#reproduction",
+    },
+  ],
+};
+
 export const sourceLinks = [
   {
     label: "View source",

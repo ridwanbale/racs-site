@@ -6,6 +6,10 @@ export const primaryNavigation = [
     href: "/research/v1",
   },
   {
+    label: "Evaluate",
+    href: "/evaluate",
+  },
+  {
     label: "About",
     href: "/about",
   },

@@ -27,6 +27,13 @@ export const siteRoutes = [
     priority: 0.9,
   },
   {
+    path: "/evaluate",
+    title: "Evaluate RACS V1",
+    description:
+      "Independent technical review, reproduction, extension, and integration assessment paths for RACS V1.",
+    priority: 0.8,
+  },
+  {
     path: "/about",
     title: "About RACS",
     description:
@@ -106,19 +113,19 @@ export const evaluateRacs = {
   body: "We are inviting robotics engineers, researchers, and autonomous-systems practitioners to reproduce, critique, and extend the V1 experiment.",
   ctas: [
     {
+      label: "Evaluate RACS",
+      href: "/evaluate",
+      variant: "primary" as const,
+    },
+    {
       label: "Explore V1 Results",
       href: "/research/v1",
-      variant: "primary" as const,
+      variant: "secondary" as const,
     },
     {
       label: "View Source",
       href: site.githubUrl,
-      variant: "secondary" as const,
-    },
-    {
-      label: "Review V1 Release",
-      href: site.v1ReleaseUrl,
-      variant: "secondary" as const,
+      variant: "tertiary" as const,
     },
   ],
 };

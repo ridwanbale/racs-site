@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { V1OperationalFlowDiagram } from "@/components/diagrams/V1OperationalFlowDiagram";
 import { FigureGrid } from "@/components/figures/FigureGrid";
-import { ButtonLink } from "@/components/site/ButtonLink";
+import { ReleaseIdentityBlock } from "@/components/release/ReleaseIdentityBlock";
 import { EvidenceCallout } from "@/components/site/EvidenceCallout";
-import { ExternalLink } from "@/components/site/ExternalLink";
 import { PageShell } from "@/components/site/PageShell";
 import { Section } from "@/components/site/Section";
 import { SectionHeader } from "@/components/site/SectionHeader";
@@ -11,9 +10,9 @@ import { StatusBadge } from "@/components/site/StatusBadge";
 import {
   hypotheses,
   metricGroups,
+  releaseIdentity,
   reproduction,
   researchV1,
-  sourceLinks,
   v1Experiment,
   v1Figures,
   v1Limitations,
@@ -432,6 +431,7 @@ export default function ResearchV1Page() {
       </Section>
 
       <Section className="bg-surface py-16">
+        <div id="reproduction" className="scroll-mt-20" />
         <SectionHeader
           eyebrow="Reproduction"
           heading="Reproduce without overwriting reference artifacts"
@@ -460,29 +460,7 @@ export default function ResearchV1Page() {
       </Section>
 
       <Section className="border-t border-border bg-surface-muted py-16">
-        <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
-          <SectionHeader
-            eyebrow="Source / release links"
-            heading="Released artifacts"
-          />
-          <div className="flex flex-col gap-3 sm:flex-row">
-            {sourceLinks.map((link, index) =>
-              index === 0 ? (
-                <ButtonLink key={link.href} href={link.href}>
-                  {link.label}
-                </ButtonLink>
-              ) : (
-                <ExternalLink
-                  key={link.href}
-                  href={link.href}
-                  className="inline-flex min-h-11 items-center justify-center border border-border-strong bg-surface px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent-strong"
-                >
-                  {link.label}
-                </ExternalLink>
-              ),
-            )}
-          </div>
-        </div>
+        <ReleaseIdentityBlock identity={releaseIdentity} />
       </Section>
     </PageShell>
   );
