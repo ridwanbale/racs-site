@@ -20,3 +20,10 @@ export const roadmapItems = [
     summary: "Heterogeneous and broader operational coordination",
   },
 ];
+
+export const roadmapSection = {
+  eyebrow: "Roadmap",
+  heading: "Building toward broader autonomous-system resilience",
+  intro:
+    "The roadmap distinguishes completed V1 evidence from next-step evaluation and exploratory directions.",
+};

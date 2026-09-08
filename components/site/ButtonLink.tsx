@@ -5,7 +5,7 @@ import { ExternalLink } from "./ExternalLink";
 type ButtonLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
   href: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "tertiary";
 };
 
 const variants = {
@@ -13,6 +13,8 @@ const variants = {
     "border-accent bg-accent text-white hover:bg-accent-strong hover:border-accent-strong",
   secondary:
     "border-border-strong bg-surface text-foreground hover:border-accent hover:text-accent-strong",
+  tertiary:
+    "border-transparent bg-transparent text-foreground underline hover:text-accent-strong",
 };
 
 export function ButtonLink({
