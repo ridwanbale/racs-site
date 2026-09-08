@@ -1,6 +1,7 @@
 import { ButtonLink } from "@/components/site/ButtonLink";
 import { EvaluateRacs } from "@/components/home/EvaluateRacs";
 import { HeroSystemVisual } from "@/components/diagrams/HeroSystemVisual";
+import { HomepageFigures } from "@/components/home/HomepageFigures";
 import { HowRacsWorks } from "@/components/home/HowRacsWorks";
 import { KeyResults } from "@/components/home/KeyResults";
 import { LimitationsSection } from "@/components/home/LimitationsSection";
@@ -60,6 +61,7 @@ export default function Home() {
       <V1ExperimentSection />
       <StudyScale />
       <KeyResults />
+      <HomepageFigures />
       <LimitationsSection />
       <RoadmapSection />
       <EvaluateRacs />
