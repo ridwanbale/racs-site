@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ButtonLink } from "@/components/site/ButtonLink";
 import { EvaluateRacs } from "@/components/home/EvaluateRacs";
 import { HeroSystemVisual } from "@/components/diagrams/HeroSystemVisual";
@@ -12,7 +13,20 @@ import { SectionEyebrow } from "@/components/site/SectionEyebrow";
 import { StudyScale } from "@/components/home/StudyScale";
 import { V1ExperimentSection } from "@/components/home/V1ExperimentSection";
 import { WhyRacs } from "@/components/home/WhyRacs";
-import { credibilityItems, homepageHero } from "@/content/site";
+import { credibilityItems, homepageHero, siteRoutes } from "@/content/site";
+
+export const metadata: Metadata = {
+  title: siteRoutes[0].title,
+  description: siteRoutes[0].description,
+  openGraph: {
+    title: siteRoutes[0].title,
+    description: siteRoutes[0].description,
+  },
+  twitter: {
+    title: siteRoutes[0].title,
+    description: siteRoutes[0].description,
+  },
+};
 
 export default function Home() {
   return (

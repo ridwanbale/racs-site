@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { site } from "@/content/site";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,9 +15,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RACS — Risk-Aware Coordination for Autonomous Systems",
-  description:
-    "RACS is an open risk-aware coordination layer for autonomous systems, with reproducible evaluation of predictive coordination under operational degradation.",
+  metadataBase: getSiteUrl(),
+  title: {
+    default: site.title,
+    template: "%s | RACS",
+  },
+  description: site.description,
+  applicationName: site.name,
+  openGraph: {
+    title: site.title,
+    description: site.description,
+    type: "website",
+    siteName: site.name,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.title,
+    description: site.description,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

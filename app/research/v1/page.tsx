@@ -19,11 +19,19 @@ import {
   v1Limitations,
   v1Results,
 } from "@/content/experiment";
+import { siteRoutes } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "RACS V1 Seeded Robustness Evaluation",
-  description:
-    "Technical evidence page for the released RACS V1 seeded robustness evaluation.",
+  title: siteRoutes[1].title,
+  description: siteRoutes[1].description,
+  openGraph: {
+    title: siteRoutes[1].title,
+    description: siteRoutes[1].description,
+  },
+  twitter: {
+    title: siteRoutes[1].title,
+    description: siteRoutes[1].description,
+  },
 };
 
 function BulletedList({ items }: { items: string[] }) {

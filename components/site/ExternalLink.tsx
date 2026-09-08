@@ -13,7 +13,7 @@ export function ExternalLink({
     <a
       className={className}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       {...props}
     >
       {children}

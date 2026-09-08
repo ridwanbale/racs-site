@@ -11,6 +11,30 @@ export const site = {
   openSourceLabel: "Open-source project",
 };
 
+export const siteRoutes = [
+  {
+    path: "/",
+    title: "RACS \u2014 Risk-Aware Coordination for Autonomous Systems",
+    description:
+      "RACS is an open risk-aware coordination layer for autonomous systems, with reproducible evaluation of predictive coordination under operational degradation.",
+    priority: 1,
+  },
+  {
+    path: "/research/v1",
+    title: "RACS V1 Seeded Robustness Evaluation",
+    description:
+      "Technical evidence page for the released RACS V1 seeded robustness evaluation.",
+    priority: 0.9,
+  },
+  {
+    path: "/about",
+    title: "About RACS",
+    description:
+      "Learn about the RACS project, its principles, current state, and maintainer.",
+    priority: 0.7,
+  },
+];
+
 export const homepageHero = {
   brandLine: site.brandLine,
   heading: "Risk-aware coordination for autonomous systems",
@@ -94,6 +118,58 @@ export const evaluateRacs = {
     {
       label: "Review V1 Release",
       href: site.v1ReleaseUrl,
+      variant: "secondary" as const,
+    },
+  ],
+};
+
+export const aboutPage = {
+  eyebrow: "ABOUT RACS",
+  heading: "An open initiative for risk-aware autonomous coordination",
+  intro:
+    "RACS explores how autonomous systems can use shared operational risk signals and bounded coordination to respond to emerging degradation before local problems become broader operational disruptions.",
+  whyExists: {
+    heading: "Why RACS exists",
+    points: [
+      "Fleets of autonomous systems create coordination challenges.",
+      "Local autonomy alone does not address system-level operational propagation.",
+      "RACS is exploring a separate risk-aware coordination layer.",
+    ],
+  },
+  principles: {
+    heading: "Project principles",
+    items: [
+      "Observable evidence",
+      "Bounded coordination",
+      "Reproducible evaluation",
+      "Explicit limitations",
+      "Open technical development",
+    ],
+  },
+  currentState: {
+    heading: "Current state",
+    items: [
+      "V1 is released.",
+      "V1 is simulation-based.",
+      "Seeded robustness evaluation is public.",
+      "Source and reproduction instructions are public.",
+      "External evaluation is the next phase.",
+    ],
+  },
+  maintainer: {
+    name: "Ridwan Bale",
+    role: "Founder and Maintainer",
+    bio: "Ridwan Bale works at the intersection of product, autonomous systems, operational risk, and robotics infrastructure. His background includes mechanical engineering, engineering management, robotics fulfillment systems, and large-scale software infrastructure.",
+  },
+  ctas: [
+    {
+      label: "View V1 Research",
+      href: "/research/v1",
+      variant: "primary" as const,
+    },
+    {
+      label: "View Source",
+      href: site.githubUrl,
       variant: "secondary" as const,
     },
   ],
